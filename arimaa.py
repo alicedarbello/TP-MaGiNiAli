@@ -7,7 +7,7 @@ def son_posiciones_vecinas(pos1 : Posicion, pos2 : Posicion) -> bool: # pragma: 
         or (pos1.columna == pos2.columna and abs(pos1.fila - pos2.fila) == 1)
 
 def direccion_desde_hasta(pos1 : Posicion, pos2 : Posicion) -> Direccion: # pragma: no cover
-    assert son_posiciones_vecinas(pos1, pos2)
+    assert son_posiciones_vecinas(pos1, pos2) # si es verdadero 
     if pos1.fila < pos2.fila:
        return NORTE
     elif pos1.fila > pos2.fila:
@@ -23,15 +23,24 @@ def pasar_turno(j : Juego) -> Juego: # pragma: no cover
 #### Ejercicio 1
 
 def tablero_bien_formado(t : Tablero) -> bool:
+# tablero bien formado: tablero de alto 8 y largo 8
     raise Exception("No implementado")
 
 def posicion_en_tablero(pos : Posicion) -> bool:
+# filas y columnas
+# posiciones trampa
     raise Exception("No implementado")
 
 def movimiento_bien_formado(m : Movimiento) -> bool:
+# accion: mover a secas, arrastrar, empujar
+# origen: donde está la pieza, posicion(fila, columna)
+# pasos: list(norte, sur, este, oeste) max 4 
     raise Exception("No implementado")
 
 def juego_bien_formado(j : Juego) -> bool:
+# tablero: piezas en las posiciones correctas (piezas doradas en las filas 1 y 2 & piezas plateadas en las filas 7 y 8)
+# turno: empieza la dorada despues plateada
+# pasos consumidos
     raise Exception("No implementado")
 
 #### Ejercicio 2
