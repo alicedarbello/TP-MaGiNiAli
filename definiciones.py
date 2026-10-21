@@ -7,7 +7,7 @@ ANCHO = 8
 MAX_PASOS = 4
 
 #### Figura
-
+# enu se utiliza para defiir los tipos de piezss para poder llamarlas figura.nombredepieza sin la necesidaad de llamarlo por su string
 class Figura(Enum):
     ELEFANTE = 'ELEFANTE'
     CAMELLO = 'CAMELLO'
